@@ -1,7 +1,11 @@
 # A Technical Explanation of Quantum Superposition in Quantum Computing
 
 You might’ve heard all sorts of analogies trying to explain what superposition is. Whether it’s a cat in a box that’s both alive and dead (i.e. Schrödinger's cat), a flipped coin that’s both heads and tails, or an electron in both spin up and spin down, quantum superposition is definitely a strange and fascinating topic.
-<insert picture>
+
+![Schrödinger's cat from Berkeley News](https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg)
+![An Electron Spin](https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png)
+
+
 This article assumes that you have a basic understanding of what quantum superposition is (if not, check out some of the helpful resources found at the bottom of this article that will introduce you to this concept).
 
 Quantum superposition is one of the three quantum phenomenons that enable quantum computers to compute in ways classical computers cannot. 
@@ -12,7 +16,7 @@ Let’s break down that definition just a little bit.
 
 (Just as a disclaimer, this article is going to dive into some of the basic mathematical representations of quantum superposition. Although it is not an extensive overview, it does give a basic understanding of how linear algebra is used in quantum computing. Understanding such mathematical concepts is very important for one to grow in their knowledge of quantum computing, since many quantum algorithms, such as Shor’s Algorithm, which shows that quantum computers have the ability to crack RSA encryption, are best understood if one understands the underlying mathematical concepts).
 
-So what exactly is a quantum system? Well in quantum computing, our quantum system is a qubit, the quantum version of a classical bit which can be found in your regular classical computer. 
+So what exactly is a quantum system? Well in quantum computing, our quantum system is a qubit, the quantum version of a classical bit which can be found in your regular classical computer.
 
 (We won’t worry too much about the physical implementation of a qubit in this article, because there are a variety of different ways to build a qubit.)
 
@@ -62,8 +66,17 @@ Representing quantum states in a vector form can be especially helpful, as linea
 
 In quantum computing, there is a special quantum gate that creates an equal 50-50 superposition called the Hadamard Gate. This can be represented as √.5*|0> + √.5*|1>. When the Hadamard gate is applied to |0> and |1>, we get the following outputs.
 
-Below we used the IBM quantum machine to explore the output of a circuit containing the Hadamard gate
+<center>
 
+| Input | Output         | 
+| :---:|:-:|
+| \|0>  | (\|0>+\|1>)/√2 | 
+| \|1>  | (\|0>-\|1>)/√2 | 
+
+<div style="text-align: left"> 
+Below we used the IBM quantum machine to explore the output of a circuit containing the Hadamard gate.
+
+```{python}
 import qiskit as q
 from qiskit import IBMQ, Aer #local simulator framework for qiskit
 from qiskit.tools.monitor import job_monitor
@@ -78,28 +91,30 @@ circuit.barrier()
 circuit.measure(0,0) #measurement --> collapses the qubit
 
 circuit.draw(output="mpl") #creates a matplotlib drawing of the gates
-
+```
 
 At the barrier, the qubit’s state is (|0>+|1>)/√2: an equal superposition of |0> and |1>. When measured, the state of the qubit collapses into one of the two states, |0> or |1>. Below is the code and the bar graph produced by running the circuit on an IBM machine.
 
+```{python}
 backend = provider.get_backend("ibmq_belem")
 job = q.execute(circuit, backend=backend, shots = 500) # we manually set the circuit to run 500 times
 result = job.result()
 counts = result.get_counts(circuit)
 plot_histogram([counts]) # displaying a histogram that shows the percentage that the qubit collapsed into the state 0 or 1 
-
+```
 
 
 The bar graph depicts an approximate equal superposition, which is what we expect from the Hadamard gate. (You might be wondering why it isn’t exactly .5 and .5 as we would expect, this is because this quantum circuit was run on real quantum computers. At the moment all real quantum computers have noise resulting in some degree of inaccuracy.)
 
 There’s a lot more math we can go into, and if you’d like to know more of the mathematical details check out the great resources in the description. 
 
-We hope that this article was informative about some of the more advanced concepts quantum superposition 
+We hope that this article was informative about some of the more advanced concepts quantum superposition.
 
 
 Resources:
-https://www.youtube.com/watch?v=j6Mw3_tOcNI
-https://youtu.be/g_IaVepNDT4
-https://medium.datadriveninvestor.com/the-math-behind-quantum-computing-qubits-and-superposition-f7a871668125
-https://medium.com/@ScottAmyx/quantum-computing-series-part-4-superposition-in-quantum-mechanics-381b98180f62
-https://medium.com/@mark.rethana/a-beginners-guide-to-the-quantum-computing-and-superposition-536e4fc040a2
+- https://www.youtube.com/watch?v=j6Mw3_tOcNI
+- https://youtu.be/g_IaVepNDT4
+- https://medium.datadriveninvestor.com/the-math-behind-quantum-computing-qubits-and-superposition-f7a871668125
+- https://medium.com/@ScottAmyx/quantum-computing-series-part-4-superposition-in-quantum-mechanics-381b98180f62
+- https://medium.com/@mark.rethana/a-beginners-guide-to-the-quantum-computing-and-superposition-536e4fc040a2
+</div>
