@@ -2,9 +2,9 @@
 
 You might’ve heard all sorts of analogies trying to explain what superposition is. Whether it’s a cat in a box that’s both alive and dead (i.e. Schrödinger's cat), a flipped coin that’s both heads and tails, or an electron in both spin up and spin down, quantum superposition is definitely a strange and fascinating topic.
 
-<img src="https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg" alt="Schrödinger's cat from Berkeley News" width="200"/>
-&nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp;  &nbsp;   &nbsp;   &nbsp;   &nbsp;   &nbsp; 
-<img src="https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png"  alt="An Electron Spin" width="250"/>
+<img src="https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg" alt="Schrödinger's cat from Berkeley News" width="300"/>
+&nbsp;   &nbsp;   &nbsp;   
+<img src="https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png"  alt="An Electron Spin" width="300"/>
 
 ## Introduction
 
@@ -24,11 +24,7 @@ So what exactly is a __quantum system__? Well in quantum computing, our __quantu
 
 (We won’t worry too much about the physical implementation of a qubit in this article, because there are a variety of different ways to build a qubit.)
 
-<<<<<<< HEAD
 Since superposition allows for a qubit to be in two states simultaneously (|0> and |1> at the same time), n qubits will represent 2<sup>n</sup> `quantum states`. This allows for an exponential increase in complexity: 1 qubit can simultaneously represent 2 `quantum states`, 2 qubits 4 `quantum states`, 3 qubits 8 `quantum states`, 4 qubits 16 `quantum states`, and so on.
-=======
-Since superposition allows for a qubit to be in two states simultaneously (|0> and |1> at the same time), n qubits will represent 2n `quantum states`. This allows for an exponential increase in complexity: 1 qubit can simultaneously represent 2 `quantum states`, 2 qubits 4 `quantum states`, 3 qubits 8 `quantum states`, 4 qubits 16 `quantum states`, and so on.
->>>>>>> 2e65227f1acc7784b496f77f93f4136586840056
 
 This differs from classical bits where each additional bit only increases the complexity by 2, thus n bits will represent 2<sup>n</sup> binary states.
 
@@ -61,14 +57,8 @@ Intuitively, |α|2 + |β|2 must equal 1 because there is a 100% probability you 
 
 This equation shows a new `quantum state` (|ψ>) that a __quantum system__ (qubit) can be in where it is in a probability of being |0> or |1>, and is thus described as being both simultaneously.
 
-<<<<<<< HEAD
-
 We can also represent the `quantum states` in the form of a vector. </br>
 <img src="https://miro.medium.com/max/818/0*pgwxkDozet_qHxK4" alt="drawing" width="100"/>
-=======
-We can also represent the `quantum states` in the form of a vector.
-<insert picture>
->>>>>>> 2e65227f1acc7784b496f77f93f4136586840056
 
 If we take the previous equation explained above,
 |ψ> = α|0> + β|1>
