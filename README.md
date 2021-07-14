@@ -5,16 +5,17 @@
 
 You might’ve heard all sorts of analogies trying to explain what superposition is. Whether it’s a cat in a box that’s both alive and dead (i.e. Schrödinger's cat), a flipped coin that’s both heads and tails, or an electron in both spin up and spin down, quantum superposition is definitely a strange and fascinating topic.
 
-![Schrödinger's cat from Berkeley News](https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg)
-![An Electron Spin](https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png) 
+| ![Schrödinger's cat from Berkeley News](https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg) | ![An Electron Spin](https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png) |
+|:---:|:---:|
+| [_Courtesy of Wikipedia_](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat)  |  [_Courtesy of Physics Central_](http://www.physicscentral.org/explore/action/fmri.cfm) |
 
 ## Introduction
 
-_This article assumes that you have a basic understanding of what quantum superposition is. We also will dive into the basic mathematical representations of quantum superposition. Although it is not an extensive overview, it does give a basic understanding of how linear algebra is used in quantum computing._
+_This article assumes that you have a basic understanding of what quantum superposition is. Moreover, we will dive into the basic mathematical representations of quantum superposition. Although it is not an extensive overview, it does give a basic understanding of how linear algebra is used in quantum computing._
 
 __Quantum superposition__ is one of the three quantum phenomenons that enable quantum computers to compute in ways classical computers cannot. 
 
-A technical explanation for quantum superposition is that a __quantum system__ (i.e. a qubit) can exist in a `quantum state` (i.e. |0> or |1>) that is a linear combination of multiple `quantum states`.
+A technical explanation for quantum superposition is that a __quantum system__ (i.e. a qubit) can exist in a `quantum state` (i.e. |0> or |1>) and a linear combination of multiple `quantum states`.
 
 Let’s break down that definition just a little bit.
 
@@ -79,7 +80,7 @@ In quantum computing, there is a special quantum gate that creates an equal 50-5
 <center>
 
 | Input | Output         | 
-| :---:|:-:|
+| :---:|:----:|
 | \|0>  | (\|0>+\|1>)/√2 | 
 | \|1>  | (\|0>-\|1>)/√2 | 
 
