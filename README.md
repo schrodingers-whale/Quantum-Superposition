@@ -1,5 +1,7 @@
 
 # A Technical Explanation of Quantum Superposition in Quantum Computing
+By Abhinav M. Hari, Ramya Iyer, Venkata Menta and Daniel Wang
+
 
 You might’ve heard all sorts of analogies trying to explain what superposition is. Whether it’s a cat in a box that’s both alive and dead (i.e. Schrödinger's cat), a flipped coin that’s both heads and tails, or an electron in both spin up and spin down, quantum superposition is definitely a strange and fascinating topic.
 
