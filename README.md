@@ -7,7 +7,7 @@ You might’ve heard all sorts of analogies trying to explain what superposition
 
 | ![Schrödinger's cat from Berkeley News](https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg) | ![An Electron Spin](https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png) |
 |:---:|:---:|
-| [_Courtesy of Wikipedia_](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat)  |  [_Courtesy of Physics Central_](http://www.physicscentral.org/explore/action/fmri.cfm) |
+| [_Courtesy of Wikipedia_](https://en.wikipedia.org/wiki/Schr%C3%B6dinger%27s_cat)  |  [_Courtesy of Chemistry God_](https://chemistrygod.com/spin-quantum-number) |
 
 ## Introduction
 
@@ -105,7 +105,11 @@ circuit.measure(0,0) #measurement --> collapses the qubit
 
 circuit.draw(output="mpl") #creates a matplotlib drawing of the gates
 ```
-![IBM Matplotlib Circuit Representation: 1 quantum circuit corresponding to 1 classical circuit. A "Hadamard Gate" is applied to the first quantum circuit. There is a barrier right after the Hadamard Gate and a measurement is performed at last.](./Pictures/Circuit.png) </br></br>
+| ![IBM Matplotlib Circuit Representation: 1 quantum circuit corresponding to 1 classical circuit. A "Hadamard Gate" is applied to the first quantum circuit. There is a barrier right after the Hadamard Gate and a measurement is performed at last.](./Pictures/Circuit.png) |
+|:---:|
+| _Matplotlib representation of quantum circuit_ |
+
+ </br></br>
 At the barrier, the qubit’s state is (|0>+|1>)/√2: an equal superposition of |0> and |1>. When measured, the state of the qubit collapses into one of the two states, |0> or |1>. Below is the code and the bar graph produced by running the circuit on an IBM machine.
 </br></br>
 ```python
@@ -115,7 +119,10 @@ result = job.result()
 counts = result.get_counts(circuit)
 plot_histogram([counts]) # bar graph with the probability that the qubit collapsed into |0> or |1> 
 ```
-![IBM Quantum Results: |0> = .520 and |1> = .480 representing the probability of each occurance.](./Pictures/Histogram.png)
+
+| ![IBM Quantu Results Bar Graph](./Pictures/Histogram.png) |
+|:---:|
+| _IBM Quantum Results: 0-qubit = .520 and 1-qubit = .480, representing the probability of each occurrence_ |
 
 
 The bar graph depicts an approximate equal superposition, which is what we expect from the Hadamard gate. (You might be wondering why it isn’t exactly .5 and .5 as we would expect: __This is because this quantum circuit was run on real quantum computers.__ At the moment all real quantum computers have noise, resulting in some degree of inaccuracy.)
