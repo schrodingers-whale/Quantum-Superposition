@@ -5,8 +5,8 @@
 
 You might’ve heard all sorts of analogies trying to explain what superposition is. Whether it’s a cat in a box that’s both alive and dead (i.e. Schrödinger's cat), a flipped coin that’s both heads and tails, or an electron in both spin up and spin down, quantum superposition is definitely a strange and fascinating topic.
 
-<img src="https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg" alt="Schrödinger's cat from Berkeley News" width="250"/>
-<img src="https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png"  alt="An Electron Spin" width="200"/>
+![Schrödinger's cat from Berkeley News](https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg)
+![An Electron Spin](https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png) 
 
 ## Introduction
 
