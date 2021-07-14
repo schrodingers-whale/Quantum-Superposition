@@ -5,6 +5,7 @@ You might’ve heard all sorts of analogies trying to explain what superposition
 ![Schrödinger's cat from Berkeley News](https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg)
 ![An Electron Spin](https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png)
 
+## Introduction
 
 This article assumes that you have a basic understanding of what quantum superposition is (if not, check out some of the helpful resources found at the bottom of this article that will introduce you to this concept).
 
@@ -16,6 +17,8 @@ Let’s break down that definition just a little bit.
 
 (Just as a disclaimer, this article is going to dive into some of the basic mathematical representations of quantum superposition. Although it is not an extensive overview, it does give a basic understanding of how linear algebra is used in quantum computing. Understanding such mathematical concepts is very important for one to grow in their knowledge of quantum computing, since many quantum algorithms, such as Shor’s Algorithm, which shows that quantum computers have the ability to crack RSA encryption, are best understood if one understands the underlying mathematical concepts).
 
+## Quantum System
+
 So what exactly is a **quantum system**? Well in quantum computing, our **quantum system** is a qubit, the quantum version of a classical bit which can be found in your regular classical computer.
 
 (We won’t worry too much about the physical implementation of a qubit in this article, because there are a variety of different ways to build a qubit.)
@@ -25,6 +28,8 @@ Since superposition allows for a qubit to be in two states simultaneously (|0> a
 This differs from classical bits where each additional bit only increases the complexity by 2, thus n bits will represent 2n binary states.
 
 This exponential increase derived from superposition, allows quantum computers to solve some complex problems that would be impossible for classical computers to do in a reasonable time period.
+
+## Quantum States
 
 Now let’s talk about `quantum states`.
 
@@ -64,6 +69,8 @@ We can simplify the equation and represent it in the form of a vector.
 
 Representing `quantum states` in a vector form can be especially helpful, as linear algebra is often used to mathematically represent quantum gates (such as the Hadamard gate) being applied to qubits. (interested in learning more about linear algebra check out the resources below this article).
 
+  ## How Quantum Superposition Relates to Quantum Computing 
+  
 In quantum computing, there is a special quantum gate that creates an equal 50-50 superposition called the Hadamard Gate. This can be represented as √.5*|0> + √.5*|1>. When the Hadamard gate is applied to |0> and |1>, we get the following outputs.
 
 <center>
