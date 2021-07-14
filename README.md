@@ -11,7 +11,7 @@ This article assumes that you have a basic understanding of what quantum superpo
 
 Quantum superposition is one of the three quantum phenomenons that enable quantum computers to compute in ways classical computers cannot. 
 
-A technical explanation for quantum superposition is that a **quantum system** (i.e. a qubit) can exist in a `quantum state` (i.e. |0> or |1>) that is a linear combination of multiple `quantum states`.
+A technical explanation for quantum superposition is that a __quantum system__ (i.e. a qubit) can exist in a `quantum state` (i.e. |0> or |1>) that is a linear combination of multiple `quantum states`.
 
 Let’s break down that definition just a little bit.
 
@@ -19,7 +19,7 @@ Let’s break down that definition just a little bit.
 
 ## Quantum System
 
-So what exactly is a **quantum system**? Well in quantum computing, our **quantum system** is a qubit, the quantum version of a classical bit which can be found in your regular classical computer.
+So what exactly is a __quantum system__? Well in quantum computing, our __quantum system__ is a qubit, the quantum version of a classical bit which can be found in your regular classical computer.
 
 (We won’t worry too much about the physical implementation of a qubit in this article, because there are a variety of different ways to build a qubit.)
 
@@ -54,7 +54,7 @@ Similarly, |β|2 results in the probability of the superposition collapsing in t
 
 Intuitively, |α|2 + |β|2 must equal 1 because there is a 100% probability you will get either the state |0> or |1> after measurement.
 
-This equation shows a new `quantum state` (|ψ>) that a **quantum system** (qubit) can be in where it is in a probability of being |0> or |1>, and is thus described as being both simultaneously.
+This equation shows a new `quantum state` (|ψ>) that a __quantum system__ (qubit) can be in where it is in a probability of being |0> or |1>, and is thus described as being both simultaneously.
 
 We can also represent the `quantum states` in the form of a vector.
 <insert picture>
