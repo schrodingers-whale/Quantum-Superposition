@@ -4,20 +4,17 @@
 You might’ve heard all sorts of analogies trying to explain what superposition is. Whether it’s a cat in a box that’s both alive and dead (i.e. Schrödinger's cat), a flipped coin that’s both heads and tails, or an electron in both spin up and spin down, quantum superposition is definitely a strange and fascinating topic.
 
 <img src="https://news.berkeley.edu/wp-content/uploads/2014/07/cats300.jpg" alt="Schrödinger's cat from Berkeley News" width="250"/>
-&nbsp;   &nbsp; 
-<img src="https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png"  alt="An Electron Spin" width="250"/>
+<img src="https://chemistrygod.com/assets/media/image/spin-quantum-number-spins.png"  alt="An Electron Spin" width="200"/>
 
 ## Introduction
 
-This article assumes that you have a basic understanding of what quantum superposition is (if not, check out some of the helpful resources found at the bottom of this article that will introduce you to this concept).
+_This article assumes that you have a basic understanding of what quantum superposition is. We also will dive into the basic mathematical representations of quantum superposition. Although it is not an extensive overview, it does give a basic understanding of how linear algebra is used in quantum computing._
 
-Quantum superposition is one of the three quantum phenomenons that enable quantum computers to compute in ways classical computers cannot. 
+__Quantum superposition__ is one of the three quantum phenomenons that enable quantum computers to compute in ways classical computers cannot. 
 
 A technical explanation for quantum superposition is that a __quantum system__ (i.e. a qubit) can exist in a `quantum state` (i.e. |0> or |1>) that is a linear combination of multiple `quantum states`.
 
 Let’s break down that definition just a little bit.
-
-(Just as a disclaimer, this article is going to dive into some of the basic mathematical representations of quantum superposition. Although it is not an extensive overview, it does give a basic understanding of how linear algebra is used in quantum computing. Understanding such mathematical concepts is very important for one to grow in their knowledge of quantum computing, since many quantum algorithms, such as Shor’s Algorithm, which shows that quantum computers have the ability to crack RSA encryption, are best understood if one understands the underlying mathematical concepts).
 
 ## Quantum System
 
@@ -113,12 +110,12 @@ backend = provider.get_backend("ibmq_belem")
 job = q.execute(circuit, backend=backend, shots = 500) # we manually set the circuit to run 500 times
 result = job.result()
 counts = result.get_counts(circuit)
-plot_histogram([counts]) # histogram with the percentage that the qubit collapsed into |0> or |1> 
+plot_histogram([counts]) # bar graph with the probability that the qubit collapsed into |0> or |1> 
 ```
 ![IBM Quantum Results: |0> = .520 and |1> = .480 representing the probability of each occurance.](./Pictures/Histogram.png)
 
 
-The bar graph depicts an approximate equal superposition, which is what we expect from the Hadamard gate. (You might be wondering why it isn’t exactly .5 and .5 as we would expect, this is because this quantum circuit was run on real quantum computers. At the moment all real quantum computers have noise resulting in some degree of inaccuracy.)
+The bar graph depicts an approximate equal superposition, which is what we expect from the Hadamard gate. (You might be wondering why it isn’t exactly .5 and .5 as we would expect: __This is because this quantum circuit was run on real quantum computers.__ At the moment all real quantum computers have noise, resulting in some degree of inaccuracy.)
 
 There’s a lot more math we can go into, and if you’d like to know more of the mathematical details check out the great resources in the description. 
 
